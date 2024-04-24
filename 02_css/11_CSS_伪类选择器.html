@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器</title>
+
+    <style>
+      /* 伪类：元素状态的描述 */
+
+      /* 动态伪类 */
+      /* 初始状态 */
+      a:link {
+        color: pink;
+      }
+
+      /* 已访问状态 */
+      a:visited {
+        color: darkgreen;
+      }
+
+      /* 鼠标悬浮时 */
+      a:hover {
+        color: brown;
+      }
+
+      /* 鼠标点击时 */
+      a:active {
+        color: darkorange;
+      }
+
+      span:hover {
+        color: blue;
+        font-size: 20px;
+      }
+
+      /* 焦点获取时，只使用表单类元素 */
+      input:focus,
+      select:focus {
+        background-color: burlywood;
+      }
+
+      /* 结构伪类 */
+      /* 选中div的第一个儿子p元素 */
+      div > p:first-child {
+        color: red;
+      }
+
+      /* 选中div的最后一个儿子p元素 */
+      div > p:last-child {
+        color: skyblue;
+      }
+
+      /* 选中div的第三个儿子p元素 */
+      div > p:nth-child(3) {
+        color: darksalmon;
+      }
+
+      /* 选中div的偶数个儿子p元素 */
+      div > p:nth-child(even) {
+        color: darkkhaki;
+      }
+
+      /* 选中div的前三个儿子p元素 */
+      div > p:nth-child(-n + 3) {
+        color: rgb(107, 159, 189);
+      }
+
+      /* div子代p类型的第一个 */
+      div > p:first-of-type {
+        color: darkred;
+      }
+
+      /* div子代p类型的最后一个 */
+      div > p:last-of-type {
+        color: tomato;
+      }
+
+      /* div子代p类型的第八个 */
+      div > p:nth-of-type(8) {
+        color: wheat;
+      }
+
+      /* 选中div的倒数第二个儿子p元素 */
+      div > p:nth-last-child(2) {
+        color: lawngreen;
+      }
+
+      /* div子代p类型的倒数第3个 */
+      div > p:nth-last-of-type(3) {
+        color: magenta;
+      }
+
+      /* 选中没有兄弟的span元素 */
+      span:only-child {
+        color: royalblue;
+      }
+
+      /* 选中没有同类型的span元素 */
+      span:only-of-type {
+        color: teal;
+      }
+
+      /* 选中整个html文档 */
+      :root {
+        background-color: beige;
+      }
+
+      /* 没有内容的div元素 */
+      div:empty {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+      }
+
+      /* 否定伪类 */
+      div:not(:empty) {
+        background-color: lemonchiffon;
+      }
+
+      /* UI伪类 */
+      /* 选中复选框或单选按钮 */
+      input:checked {
+        width: 50px;
+        height: 50px;
+      }
+
+      input:disabled {
+        background-color: slategray;
+      }
+
+      /* 目标伪类 */
+      div.to {
+        background-color: blueviolet;
+        height: 200px;
+      }
+
+      /* 选中锚点指向的元素 */
+      div:target {
+        background-color: aquamarine;
+      }
+
+      /* 语言伪类 */
+      :lang(zh-CN) {
+        color: yellowgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="https://www.baidu.com/">baidu</a>
+    <br />
+
+    <a href="https://www.jd.com/">jd</a>
+    <br />
+
+    <span>happy everday</span>
+    <br />
+
+    <input type="text" />
+    <br />
+
+    <input type="text" />
+    <br />
+
+    <input type="text" />
+    <br />
+
+    <select>
+      <option value="luan">luan</option>
+      <option value="wuhu">wuhu</option>
+      <option value="hefei">hefei</option>
+      <option value="anqing">anqing</option>
+    </select>
+
+    <div>
+      <span>测试1</span>
+      <p>英语:99</p>
+      <p>语文:88</p>
+      <p>数学:89</p>
+      <span>测试2</span>
+      <p>物理:98</p>
+      <p>生物:96</p>
+      <p>英语:99</p>
+      <span>测试3</span>
+      <p>语文:88</p>
+      <p>数学:89</p>
+      <span>测试4</span>
+      <p>物理:98</p>
+      <span>测试5</span>
+      <p>生物:96</p>
+    </div>
+
+    <div>
+      <span>测试6</span>
+      <p>英语:99</p>
+      <p>语文:88</p>
+      <p>数学:89</p>
+      <p>物理:98</p>
+      <p>生物:96</p>
+    </div>
+
+    <div>
+      <span>测试7</span>
+    </div>
+
+    <div></div>
+
+    <input type="checkbox" />
+    <br />
+    <input type="radio" name="gender" />
+    <input type="radio" name="gender" />
+    <br />
+    <input type="text" />
+    <input type="text" disabled />
+    <br />
+
+    <a href="#one">跳转到第一个</a><br />
+    <a href="#two">跳转到第二个</a><br />
+    <a href="#three">跳转到第三个</a><br />
+    <a href="#four">跳转到第四个</a><br />
+    <a href="#five">跳转到第五个</a><br />
+
+    <div class="to" id="one">第一个</div>
+    <br />
+    <div class="to" id="two">第二个</div>
+    <br />
+    <div class="to" id="three">第三个</div>
+    <br />
+    <div class="to" id="four">第四个</div>
+    <br />
+    <div class="to" id="five">第五个</div>
+    <br />
+
+    <div lang="zh-CN">你好</div>
+  </body>
+</html>

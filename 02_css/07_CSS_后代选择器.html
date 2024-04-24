@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后代选择器</title>
+    <style>
+      ul li {
+        color: goldenrod;
+        background-color: bisque;
+      }
+
+      .orderlist li.name1 {
+        color: indianred;
+        font-size: 30px;
+      }
+
+      #name2 {
+        color: khaki;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>smoke</li>
+      <li>drink</li>
+      <li>dohair</li>
+    </ul>
+
+    <hr />
+
+    <ol class="orderlist">
+      <li class="name1">jack</li>
+      <li id="name2">lisa</li>
+      <li>nora</li>
+    </ol>
+  </body>
+</html>

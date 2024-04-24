@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>盒子模型</title>
+    <style>
+      #d1 {
+        /* 盒子大小=content+padding+border */
+        /* 内容尺寸 */
+        width: 300px;
+        height: 300px;
+        /* 内边距, 会被背景色填充, 四周(上右下左)可调 */
+        padding: 20px;
+        /* 边框, 会被背景色填充, 四周可调*/
+        border: 10px dashed;
+        /* 外边距, 四周可调 */
+        margin: 20px;
+
+        font-size: 20px;
+        background-color: rgba(222, 135, 215, 0.87);
+      }
+
+      /* 设置content */
+      #d2 {
+        /* min-width: 100px;
+        max-width: 900px;
+        min-height: 100px;
+        max-height: 300px; */
+        width: 400px;
+        height: 200px;
+        background-color: rgba(255, 166, 0, 0.719);
+        overflow: auto;
+      }
+
+      #d3 {
+        width: 50px;
+        height: 50px;
+        display: none;
+      }
+
+      #d4 {
+        width: 50px;
+        height: 50px;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">hello ahu!</div>
+    <div id="d2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit fuga saepe
+      quia hic optio maxime explicabo at tempore ipsum nihil?Lorem ipsum dolor
+      sit amet consectetur adipisicing elit. Vitae aperiam repudiandae veniam
+      neque ipsam corporis commodi fugit maxime, reiciendis pariatur nisi,
+      dolorem, ullam vel obcaecati esse harum eaque eius maiores. Lorem ipsum
+      dolor, sit amet consectetur adipisicing elit. Numquam officia nisi quaerat
+      esse aliquid labore, at consequatur aliquam molestias, et, a natus harum
+      nemo odio laboriosam impedit maiores vel odit. Lorem ipsum dolor sit amet
+      consectetur adipisicing elit. Eveniet recusandae voluptatem, tenetur porro
+      officia id harum dolore eos commodi quod eius modi exercitationem tempore
+      veritatis culpa itaque reprehenderit obcaecati! Sapiente?
+    </div>
+
+    <div id="d3">不占位</div>
+    <div id="d4">占位</div>
+
+    <!-- 不影响布局的属性大部分都能继承 -->
+
+    <!-- 默认样式 -->
+    <div>
+      <a href="https://www.alibaba.com/">alibaba</a>
+      <span>hello alibaba</span>
+    </div>
+    <hr />
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <hr />
+    <p>paragraph</p>
+    <hr />
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </body>
+</html>

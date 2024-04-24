@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪元素选择器</title>
+    <style>
+      /* 伪元素：是元素中的一些特殊位置 */
+      /* 选中div中的第一个字母 */
+      div::first-letter {
+        color: tomato;
+        font-size: 50px;
+      }
+
+      /* 选中div中的第一行 */
+      div::first-line {
+        color: teal;
+      }
+
+      /* div中被鼠标选中的位置 */
+      div::selection {
+        background-color: seagreen;
+        color: orange;
+      }
+
+      /* 选中input元素中的提示文字 */
+      input::placeholder {
+        color: grey;
+      }
+
+      /* 在p元素最开始位置并创建一个子元素 */
+      p::before {
+        /* 用content属性添加内容 */
+        content: "$";
+      }
+
+      /* 在p元素最末尾位置并创建一个子元素 */
+      p::after {
+        content: ".00";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod ratione
+      ipsa nemo officiis maxime suscipit labore modi neque, iste assumenda.
+    </div>
+
+    <br />
+
+    <input type="text" placeholder="account name" />
+
+    <p>16</p>
+    <p>25</p>
+    <p>38</p>
+
+    <!-- 选择器优先级 -->
+    <span>id选择器 > 类、伪类、属性选择器 > 元素、伪元素选择器</span>
+
+    <!-- CSS三大特性 -->
+    <div>
+      <span>层叠性：发生样式冲突时后来居上</span>
+      <br />
+      <span>继承性：元素会自动继承父元素或祖先元素的属性</span>
+      <br />
+      <span
+        >优先级：!important > 行内样式 > id选择器 > 类、伪类、属性选择器 >
+        元素、伪元素选择器 > * > 继承的样式</span
+      >
+      <br />
+    </div>
+  </body>
+</html>

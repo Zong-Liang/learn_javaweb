@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>元素显示模式</title>
+    <style>
+      #d1 {
+        background-color: rgba(255, 0, 0, 0.486);
+      }
+
+      #d2 {
+        background-color: rgba(0, 128, 0, 0.575);
+      }
+
+      #d3 {
+        background-color: rgba(0, 0, 255, 0.534);
+      }
+
+      #d4,
+      #d5,
+      #d6 {
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        background-color: rgba(165, 42, 42, 0.637);
+        /* 改变元素显示模式 */
+        display: inline-block;
+      }
+
+      a {
+        width: 100px;
+        height: 50px;
+        font-size: 20px;
+        display: block;
+        text-decoration: none;
+      }
+
+      #a1 {
+        background-color: rgba(255, 127, 80, 0.774);
+      }
+
+      #a2 {
+        background-color: rgba(127, 80, 255, 0.733);
+      }
+
+      #a3 {
+        background-color: rgba(80, 255, 109, 0.699);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+      <dl>
+        <dt>
+          块元素(block):
+          html、body、div、span、h1~h6、hr、p、pre、ul、ol、li、dl、dt、dd、table、tbody、thead、tfoot、tr、caption、form、option
+        </dt>
+        <dd>独占一行</dd>
+        <dd>默认宽度：撑满父元素</dd>
+        <dd>默认高度：内容撑开</dd>
+        <dd>可通过CSS设置宽高</dd>
+      </dl>
+    </div>
+    <div id="d2">
+      <dl>
+        <dt>行内元素(inline): br、em、strong、sub、sup、del、ins、a、label</dt>
+        <dd>不独占一行</dd>
+        <dd>默认宽度：内容撑开</dd>
+        <dd>默认高度：内容撑开</dd>
+        <dd>无法通过CSS设置宽高</dd>
+      </dl>
+    </div>
+    <div id="d3">
+      <dl>
+        <dt>
+          内联块元素(inline-block):img、td、th、input、textarea、select、button、iframe
+        </dt>
+        <dd>不独占一行</dd>
+        <dd>默认宽度：撑满父元素</dd>
+        <dd>默认高度：内容撑开</dd>
+        <dd>可通过CSS设置宽高</dd>
+      </dl>
+    </div>
+
+    <div id="d4">d4</div>
+    <div id="d5">d5</div>
+    <div id="d6">d6</div>
+    <hr />
+
+    <a id="a1" href="https://www.baidu.com/">baidu</a>
+    <a id="a2" href="https://www.toutiao.com/">toutiao</a>
+    <a id="a3" href="https://www.jd.com/">jd</a>
+  </body>
+</html>

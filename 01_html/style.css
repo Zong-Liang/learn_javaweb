@@ -1,0 +1,77 @@
+/* 外部样式 */
+body {
+  background-color: coral;
+  font-size: large;
+  margin: 20px;
+  padding: 20px;
+}
+
+div {
+  background-color: cornflowerblue;
+  align-self: center;
+}
+
+p {
+  color: darkgreen;
+}
+
+span {
+  color: darkseagreen;
+}
+
+.cities {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+#p1 {
+  color: lemonchiffon;
+}
+
+#p2 {
+  color: lime;
+}
+
+#p3 {
+  color: lightblue;
+}
+
+#p4 {
+  color: lightcoral;
+}
+
+#p5 {
+  color: lightseagreen;
+}
+
+#header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+#nav {
+  line-height: 30px;
+  background-color: #eeeeee;
+  height: 300px;
+  width: 100px;
+  float: left;
+  padding: 5px;
+}
+
+#section {
+  width: 350px;
+  float: left;
+  padding: 10px;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+  clear: both;
+  text-align: center;
+  padding: 5px;
+}

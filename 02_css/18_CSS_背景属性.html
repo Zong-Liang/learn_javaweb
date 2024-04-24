@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景属性</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        border: 6px black solid;
+        font-size: 40px;
+
+        /* 设置背景色，默认透明 */
+        background-color: cornflowerblue;
+
+        /* 设置背景图片 */
+        background-image: url(../images/汉堡.svg);
+
+        /* 设置背景图片的重复方式 */
+        background-repeat: no-repeat;
+
+        /* 控制背景图片的位置 */
+        background-position: center top;
+        background-position: 410px 100px;
+
+        /* 复合属性 */
+        background: coral url(../images/包子.png) no-repeat 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>nice to meet you</div>
+  </body>
+</html>

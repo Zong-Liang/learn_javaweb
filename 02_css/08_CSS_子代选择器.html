@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>子代选择器</title>
+    <style>
+      div > a {
+        color: lightcoral;
+      }
+
+      div > p > a {
+        color: black;
+      }
+
+      .inner > a {
+        color: aquamarine;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <a href="#">jack</a>
+      <a href="#">white</a>
+      <a href="#">rose</a>
+      <br />
+      <a href="#">smith</a>
+      <div class="inner">
+        <a href="#">matthew</a>
+      </div>
+      <br />
+    </div>
+  </body>
+</html>

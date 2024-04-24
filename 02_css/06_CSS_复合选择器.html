@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>复合选择器</title>
+    <style>
+      /* 交集选择器 */
+      .rich {
+        color: hotpink;
+        font-size: 80px;
+        background-color: goldenrod;
+        width: 320px;
+      }
+
+      .star {
+        color: lightblue;
+        font-size: 60px;
+      }
+
+      p.dog {
+        color: rgb(95, 160, 21);
+      }
+
+      p.pig {
+        color: honeydew;
+      }
+
+      /* 并集选择器 */
+      .rich,
+      .star,
+      .dog,
+      .pig,
+      #sheep {
+        font-size: 40px;
+        background-color: goldenrod;
+        width: 500px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2 class="rich">土豪张三</h2>
+    <h2 class="star">明星李四</h2>
+    <hr />
+    <p class="dog">小狗旺财</p>
+    <p class="pig">小猪佩奇</p>
+    <p id="sheep">小羊苏西</p>
+  </body>
+</html>

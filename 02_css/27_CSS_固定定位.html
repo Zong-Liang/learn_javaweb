@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定定位</title>
+    <style>
+      .outer {
+        width: 500px;
+        background-color: rgba(255, 68, 0, 0.39);
+        border: 1px solid black;
+        padding: 20px;
+        position: relative;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+
+      .box2 {
+        background-color: green;
+        /* 固定定位: 位置参考视口 */
+        position: fixed;
+        bottom: 0;
+        right: 0;
+      }
+
+      .box3 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      molestiae consequatur ipsum, impedit ipsa ea inventore esse nihil quia,
+      quas, quod maiores repellat aperiam cum perferendis assumenda placeat!
+      Natus asperiores odio vero perferendis itaque alias nisi, inventore,
+      aliquid officiis at consequatur nesciunt. Minus, facilis, provident
+      mollitia consectetur non vero aperiam facere ea ad, culpa ratione sapiente
+      quibusdam magnam? Nihil error reiciendis, dolore animi, ut, doloribus
+      atque optio ad cupiditate ipsam modi. Ratione harum quae est aspernatur
+      dolor cum, odio quibusdam dolorem unde ullam commodi. Officia quam
+      suscipit dicta dolorum nesciunt velit ipsa cupiditate explicabo harum
+      magnam corporis, voluptatem id dolore deserunt expedita atque saepe enim.
+      Aspernatur iusto voluptate natus nisi totam exercitationem, amet itaque
+      illo! Quasi saepe ullam ad omnis earum temporibus commodi mollitia,
+      adipisci voluptatem fugit consequatur at corporis sequi atque voluptate
+      dolores ipsum maiores! Ipsam suscipit fuga veritatis illo eligendi magni,
+      sed reiciendis fugit impedit soluta itaque ipsum optio veniam minima
+      pariatur iste alias error laborum ea. Iusto nulla dolorem ipsa. Numquam
+      assumenda consectetur nisi praesentium quo ipsam sunt ratione ullam
+      aspernatur perferendis. Sint ea maiores doloribus optio facilis
+      doloremque, non fuga dolore maxime culpa voluptate quam perferendis! Sequi
+      eveniet voluptatum quasi, culpa assumenda in dolore exercitationem maiores
+      quos! Nemo ea sed magnam voluptas magni dolore placeat id doloremque amet,
+      libero voluptatibus quisquam quia eveniet, sit porro fuga iure quasi nobis
+      blanditiis praesentium voluptatum aperiam accusamus. Commodi temporibus
+      ipsam ullam quisquam minus explicabo, et quam magni nulla adipisci
+      eligendi, asperiores eos ratione suscipit inventore eaque assumenda eius
+      quis ut architecto reiciendis ex laudantium fugiat. Molestiae, iure
+      molestias voluptates explicabo repellat nesciunt quos sit delectus
+      perspiciatis sint accusamus ullam fugit cupiditate saepe neque ut nulla
+      non aperiam consequuntur numquam dolore ipsum fugiat?
+    </div>
+  </body>
+</html>

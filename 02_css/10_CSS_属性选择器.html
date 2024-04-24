@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>属性选择器</title>
+
+    <style>
+      /* 选中有title属性的元素 */
+      [title] {
+        color: darkorange;
+      }
+
+      /* 选中有title属性，且属性值为hello1的元素 */
+      [title="hello1"] {
+        color: chartreuse;
+      }
+
+      /* 选中有title属性，且属性值以h开头的元素 */
+      [title^="h"] {
+        color: rgb(255, 0, 200);
+      }
+
+      /* 选中有title属性，且属性值以1结尾的元素 */
+      [title$="1"] {
+        color: goldenrod;
+      }
+
+      /* 选中有title属性，且属性值里包含e的元素 */
+      [title*="e"] {
+        color: lightskyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div title="hello1">hello1</div>
+    <div title="hello2">hello2</div>
+    <div title="hello3">hello3</div>
+    <div title="hello4">hello4</div>
+  </body>
+</html>

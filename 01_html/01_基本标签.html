@@ -1,0 +1,228 @@
+<!--
+    HTML(Hyper Text Markup Language)是超文本标记语言, 用HTML标签来描述网页(HTML文档).
+
+    Web浏览器的作用是读取HTML文档, 并以网页的形式显示出它们.
+
+    HTML标签是由尖括号包围的关键词, 通常是成对出现的, 标签对中的第一个标签是开始标签, 第二个标签是结束标签.
+
+    HTML元素指的是从开始标签(opening tag)到结束标签(closing tag)的所有代码.
+
+    HTML标签和属性大小写不敏感, 但都建议小写, 且属性值应该始终被包括在引号内.
+-->
+
+<!DOCTYPE html>
+
+<!-- <html></html>定义了整个HTML文档 -->
+<html lang="en">
+  <!-- <head></head>定义关于文档信息 -->
+
+  <head>
+    <!-- <meta>定义关于HTML文档的元信息 -->
+    <meta charset="UTF-8" />
+
+    <!-- <title></title>定义文档标题 -->
+    <title>this is title</title>
+  </head>
+
+  <!-- <body></body\>定义了HTML文档的主体 -->
+
+  <body
+    background="https://cdn.jsdelivr.net/gh/ZL85/ImageBed@main//202309011955614.png"
+  >
+    <!-- <h1></h1>~<h6></h6>定义标题 -->
+    <h1>this is head1</h1>
+    <h2>this is head2</h2>
+    <h3>this is head3</h3>
+    <h4>this is head4</h4>
+    <h5>this is head5</h5>
+    <h6>this is head6</h6>
+
+    <!-- <p></p>定义段落 -->
+    <p>this is my first paragraph</p>
+
+    <!-- <div></div>是块级元素, 定义文档中的分区或节 -->
+    <div>
+      <!-- style定义样式 -->
+      <p style="color: yellow; align-content: center; background-color: green">
+        this is html style test
+      </p>
+
+      <!-- <b></b>定义粗体文本 -->
+      <p><b>bold text</b></p>
+
+      <!-- <small></small>定义小号字 -->
+      <p><small>big text</small></p>
+
+      <!-- <em></em>定义着重文字 -->
+      <p><em>emphasize text</em></p>
+
+      <!-- <i></i>定义斜体 -->
+      <p><i>italic text</i></p>
+
+      <!-- <strong></strong>定义加重语气 -->
+      <p><strong>strong text</strong></p>
+
+      <!-- <sub></sub>定义下标字 -->
+      <p>hello<sub>sub text</sub></p>
+
+      <!-- <sup></sup定义上标字 -->
+      <p>hello<sup>sup text</sup></p>
+
+      <!-- <ins></ins>定义插入字 -->
+      <p>hello<ins>insert</ins></p>
+
+      <!-- <del></del>定义删除字 -->
+      <p><del>delete text</del></p>
+
+      <!-- <q></q>定义短的引用 -->
+      <p>this is <q>short quotation</q></p>
+
+      <!-- <blockquote></blockquote>定义从其他来源引用的节, cite属性指出引用出处 -->
+      <p>this is long quotation</p>
+      <blockquote cite="https://www.worldwildlife.org/who/index.html">
+        WWF works to help local communities conserve the natural resources they
+        depend upon; transform markets and policies toward sustainability; and
+        protect and restore species and their habitats. Our efforts ensure that
+        the value of nature is reflected in decision-making from a local to a
+        global scale.
+      </blockquote>
+
+      <!-- <abbr></abbr>定义缩写或首字母缩略语, title属性说明具体内容 -->
+      <p><abbr title="World Health Organization">WHO</abbr></p>
+
+      <!-- <dfn></dfn>定义项目或缩写的定义 -->
+      <!-- 设置了title属性, 定义项目 -->
+      <p><dfn title="World Health Organization">WHO</dfn> is founded in 1948</p>
+      <!-- 含有<abbr></abbr>, title定义项目 -->
+      <p>
+        <dfn><abbr title="World Health Organization">WHO</abbr></dfn> is founded
+        in 1948
+      </p>
+      <!-- <dfn></dfn>文本内容即是项目, 且父元素包含定义 -->
+      <p><dfn>WHO</dfn> World Health Organization is founded in 1948</p>
+    </div>
+
+    <!-- <cite></cite>定义著作的标题, 以斜体显示 -->
+    <p><cite>The Scream</cite> by Edward Munch. Painted in 1893</p>
+
+    <!-- <bdo></bdo>定义文本方向 -->
+    <p><bdo dir="rtl">This text will be written from right to left</bdo></p>
+
+    <div style="background-color: violet">
+      <!--
+        颜色由一个十六进制符号来定义, 这个符号由红色、绿色和蓝色的值组成(RGB).
+        每种颜色的最小值是0(十六进制：#00), 最大值是 255(十六进制：#FF).
+    -->
+      <p style="color: aqua">aqua</p>
+      <p style="color: black">black</p>
+      <p style="color: blue">blue</p>
+      <p style="color: fuchsia">fuchsia</p>
+      <p style="color: gray">gray</p>
+      <p style="color: green">green</p>
+      <p style="color: lime">lime</p>
+      <p style="color: maroon">maroon</p>
+      <p style="color: navy">navy</p>
+      <p style="color: olive">olive</p>
+      <p style="color: purple">purple</p>
+      <p style="color: red">red</p>
+      <p style="color: silver">silver</p>
+      <p style="color: teal">teal</p>
+      <p style="color: white">white</p>
+      <p style="color: yellow">yellow</p>
+    </div>
+
+    <!-- <table></table>定义表格 -->
+    <table border="1" width="200" height="200" cellspacing="0">
+      <caption>
+        caption
+      </caption>
+
+      <thead height="50" align="center" valign="middle">
+        <tr>
+          <!-- <th></th>定义表头 -->
+          <th>thead1</th>
+          <!-- 横跨两列单元格 -->
+          <th colspan="2">thead2</th>
+        </tr>
+      </thead>
+
+      <tbody height="300" align="center" valign="middle">
+        <!-- <tr></tr>定义行 -->
+        <tr>
+          <!-- <td></td>定义单元格 -->
+          <td>r1, c1</td>
+          <td>r1, c2</td>
+          <td>r1, c3</td>
+        </tr>
+        <tr>
+          <td>r2, c1</td>
+          <td>r2, c2</td>
+          <td>r2, c3</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>r3, c2</td>
+          <td>r3, c3</td>
+        </tr>
+      </tbody>
+
+      <tfoot height="50" align="center" valign="middle">
+        <tr>
+          <td></td>
+          <td></td>
+          <td>tfoot</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- <ul></ul>定义无序列表 -->
+    <ul>
+      <!-- <li></li>定义列表项 -->
+      <li>tea</li>
+      <li>coffe</li>
+      <li>cola</li>
+    </ul>
+
+    <!-- <ol></ol>定义有序列表 -->
+    <ol>
+      <!-- <li></li>定义列表项 -->
+      <li>uk</li>
+      <li>china</li>
+      <li>usa</li>
+    </ol>
+
+    <!-- <dl></dl>自定义列表, 是项目及其注释的组合 -->
+    <dl>
+      <!-- <dt></dt>定义列表项 -->
+      <dt>html</dt>
+      <!-- <dd></dd>定义列表项的定义 -->
+      <dd>Hyper Text Markup Language</dd>
+      <dt>css</dt>
+      <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <!-- <a></a>定义链接, 属性href指定链接的地址 -->
+    <a href="https://www.baidu.com/">this is a link of baidu</a>
+
+    <!-- 没有内容的HTML元素被称为空元素 -->
+    <!-- 换行 -->
+    <br />
+    <!-- 水平线 -->
+    <hr />
+
+    <!-- <img>定义图像, 尺寸可通过属性定义, alt属性用来为图像定义一串预备的可替换的文本 -->
+    <img
+      src="https://cdn.jsdelivr.net/gh/ZL85/ImageBed@main//202309011607199.jpeg"
+      width="200"
+      height="200"
+      alt="an image"
+    />
+
+    <!-- <address></address>定义文档或文章的联系信息, 以斜体显示, 大多数浏览器会在此元素前后添加折行 -->
+    <address>
+      written by ZL<br />
+      visit us at: learnweb.com<br />
+      ahu, hefei, anhui, china<br />
+    </address>
+  </body>
+</html>

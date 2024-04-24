@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>布局技巧</title>
+    <style>
+      .outer1 {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(95, 158, 160, 0.849);
+        overflow: hidden;
+      }
+
+      .inner1 {
+        width: 200px;
+        height: 100px;
+        /* padding: 5px; */
+        /* border: 5px solid red; */
+        background-color: rgba(39, 168, 35, 0.822);
+        margin: 0 auto;
+        margin-top: 150px;
+        /* margin-top: 140px; */
+        text-align: center;
+        line-height: 100px;
+      }
+
+      .outer2 {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(95, 158, 160, 0.849);
+        text-align: center;
+        line-height: 400px;
+      }
+
+      .inner2 {
+        background-color: cornflowerblue;
+      }
+
+      /* 行内元素、行内块元素可以被父元素当做文本处理 */
+      .outer3 {
+        width: 400px;
+        height: 400px;
+        background-color: rgba(160, 121, 95, 0.678);
+        text-align: center;
+        line-height: 400px;
+        /* 消除父元素对子元素文字的影响 */
+        font-size: 0px;
+      }
+
+      .inner3 {
+        background-color: rgba(100, 205, 237, 0.842);
+        vertical-align: middle;
+        font-size: 40px;
+      }
+
+      .img1 {
+        vertical-align: middle;
+      }
+
+      /* 消除元素间空白 */
+      #d1 {
+        font-size: 0;
+      }
+
+      .s1 {
+        font-size: 20px;
+        background-color: rgba(226, 138, 6, 0.781);
+      }
+
+      .s2 {
+        font-size: 20px;
+        background-color: rgb(7, 192, 63);
+      }
+
+      .s3 {
+        font-size: 20px;
+        background-color: rgb(226, 14, 49);
+      }
+
+      #i1 {
+        background-color: rgba(226, 138, 6, 0.781);
+      }
+
+      #i2 {
+        background-color: rgb(7, 192, 63);
+      }
+
+      #i3 {
+        background-color: rgb(226, 14, 49);
+      }
+
+      #i4 {
+        /* 行内块空白 */
+        background-color: rgba(255, 166, 0, 0.938);
+        /* 同一行有文字 */
+        vertical-align: middle;
+        /* font-size: 0; */
+        /* 同一行只有图片 */
+        /* display: block; */
+      }
+
+      #d2 {
+        width: 400px;
+        height: 400px;
+        background-color: crimson;
+      }
+
+      /* 图片浮动 */
+      #i5 {
+        width: 200px;
+        float: left;
+        margin-left: 0.5em;
+      }
+
+      /* 文字浮动 */
+      #d3 {
+        background-color: darkorange;
+      }
+
+      #d3::first-letter {
+        color: red;
+        font-size: 40px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer1">
+      <div class="inner1">inner</div>
+    </div>
+
+    <br />
+
+    <div class="outer2">
+      <span class="inner2">出来玩啊？</span>
+    </div>
+    <br />
+
+    <div class="outer3">
+      <span class="inner3">出来玩啊？</span>
+      <img src="/images/汉堡.svg" alt="汉堡" class="img1" />
+    </div>
+
+    <br />
+
+    <div id="d1">
+      <span class="s1">人之初</span>
+      <span class="s2">性本善</span>
+      <span class="s3">习相近</span>
+      <hr />
+      <img src="/images/啤酒.svg" alt="啤酒" id="i1" />
+      <img src="/images/可乐.svg" alt="可乐" id="i2" />
+      <img src="/images/粽子.svg" alt="粽子" id="i3" />
+    </div>
+
+    <br />
+
+    <img src="/images/米饭.svg" alt="米饭" id="i4" />
+
+    <br />
+    <br />
+
+    <div id="d2">
+      <img src="/images/包子.png" alt="包子" id="i5" />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quaerat
+      dolor, deleniti blanditiis, maiores quasi quisquam vel quas deserunt
+      tenetur mollitia eum culpa laboriosam natus numquam? Nihil reiciendis
+      facere quaerat praesentium et explicabo aperiam, ab doloribus quam
+      voluptatum qui excepturi atque quasi quos magni culpa rem obcaecati
+      voluptas laboriosam saepe minima nobis minus dolorum quidem. Quod, qui
+      recusandae fugit harum fuga ducimus sapiente, odio atque consequuntur
+      minus autem cupiditate, corporis totam. Neque at dicta pariatur atque vero
+      architecto, officia eaque.
+    </div>
+
+    <br />
+
+    <div id="d3">
+      Horem ipsum dolor sit amet consectetur adipisicing elit. Molestias quaerat
+      dolor, deleniti blanditiis, maiores quasi quisquam vel quas deserunt
+      tenetur mollitia eum culpa laboriosam natus numquam? Nihil reiciendis
+      facere quaerat praesentium et explicabo aperiam, ab doloribus quam
+      voluptatum qui excepturi atque quasi quos magni culpa rem obcaecati
+      voluptas laboriosam saepe minima nobis minus dolorum quidem. Quod, qui
+      recusandae fugit harum fuga ducimus sapiente, odio atque consequuntur
+      minus autem cupiditate, corporis totam. Neque at dicta pariatur atque vero
+      architecto, officia eaque.
+    </div>
+  </body>
+</html>
