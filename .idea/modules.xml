@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/java_code/java_code.iml" filepath="$PROJECT_DIR$/java_code/java_code.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/learn_javaweb.iml" filepath="$PROJECT_DIR$/.idea/learn_javaweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_code/learn_javaweb_01/learn_javaweb_01.iml" filepath="$PROJECT_DIR$/java_code/learn_javaweb_01/learn_javaweb_01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_code/learn_javaweb_02/learn_javaweb_02.iml" filepath="$PROJECT_DIR$/java_code/learn_javaweb_02/learn_javaweb_02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_code/learn_javaweb_03/learn_javaweb_03.iml" filepath="$PROJECT_DIR$/java_code/learn_javaweb_03/learn_javaweb_03.iml" />
     </modules>
   </component>
 </project>

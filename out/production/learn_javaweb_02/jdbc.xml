@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jdbc>
+    <dev id="01">
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/learn_java_web</url>
+        <username>root</username>
+        <password>123456</password>
+    </dev>
+
+    <test id="02">
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/learn_java_web</url>
+        <username>root</username>
+        <password>123456</password>
+    </test>
+
+    <prod id="03">
+        <driver>com.mysql.jdbc.Driver</driver>
+        <url>jdbc:mysql://localhost:3306/learn_java_web</url>
+        <username>root</username>
+        <password>123456</password>
+    </prod>
+</jdbc>
