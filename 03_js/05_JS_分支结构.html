@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        /*
+        分支结构
+        */
+
+        // if语句
+        var a = 10;
+        if (a > 5) {
+            console.log("a大于5");
+        }
+
+        // if...else语句
+        var b = 10;
+        if (b > 5) {
+            console.log("b大于5");
+        } else {
+            console.log("b小于等于5");
+        }
+
+        // if...else if...else语句
+        var c = 10;
+        if (c > 5) {
+            console.log("c大于5");
+        } else if (c < 5) {
+            console.log("c小于5");
+        } else {
+            console.log("c等于5");
+        }
+
+        // switch语句
+        var d = 10;
+        switch (d) {
+            case 1:
+                console.log("d等于1");
+                break;
+            case 5:
+                console.log("d等于5");
+                break;
+            case 10:
+                console.log("d等于10");
+                break;
+            default:
+                console.log("d不等于1、5、10");
+        }
+
+        // switch语句的穿透性
+        var e = prompt("请输入一个数字");
+        var e = parseInt(e); // 将输入的字符串转换为数字
+        switch (e) {
+            case 1:
+                console.log("e等于1");
+            case 5:
+                console.log("e等于5");
+            case 10:
+                console.log("e等于10");
+            default:
+                console.log("e不等于1、5、10");
+        }
+    </script>
+</head>
+<body></body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function func1() {
+            let ele1 = document.getElementById('username')
+            console.log(ele1)
+        }
+
+        function func2() {
+            let ele2 = document.getElementsByTagName('input')
+            console.log(ele2)
+            for (let i = 0; i < ele2.length; i++) {
+                console.log(ele2[i])
+            }
+        }
+
+        function func3() {
+            let ele3 = document.getElementsByName('a')
+            console.log(ele3)
+            for (let i = 0; i < ele3.length; i++) {
+                console.log(ele3[i])
+            }
+        }
+
+        function func4() {
+            let ele4 = document.getElementsByClassName('A')
+            console.log(ele4)
+            for (let i = 0; i < ele4.length; i++) {
+                console.log(ele4[i])
+            }
+        }
+
+        function func5() {
+            let div01 = document.getElementById('div01')
+            let ele5 = div01.children // 获取全部子元素
+            console.log(ele5)
+            for (let i = 0; i < ele5.length; i++) {
+                console.log(ele5[i])
+            }
+
+            let ele6 = div01.firstElementChild // 获取第一个子元素
+            console.log(ele6)
+
+            let ele7 = div01.lastElementChild // 获取最后一个子元素
+            console.log(ele7)
+        }
+
+        function func6() {
+            let ele8 = document.getElementById('password')
+            let ele9 = ele8.parentElement // 获取父元素
+            console.log(ele9)
+        }
+
+        function func7() {
+            let ele10 = document.getElementById('email')
+            let ele11 = ele10.nextElementSibling // 获取下一个兄弟元素
+            console.log(ele11)
+
+            let ele12 = ele10.previousElementSibling // 获取上一个兄弟元素
+            console.log(ele12)
+        }
+
+        function changeAttribute() {
+            let ele13 = document.getElementById('in01')
+            console.log(ele13.value)
+            console.log(ele13.type)
+            ele13.value = 'world'
+            ele13.type = 'button'
+
+        }
+
+        function changeStyle() {
+            let ele14 = document.getElementById('in01')
+            ele14.style.color = 'orange'
+            ele14.style.borderRadius = '5px' //原始样式中的border-radius属性要写为borderRadius
+        }
+
+        function changeText() {
+            let ele15 = document.getElementById('div02')
+            console.log(ele15.innerText) //innerText只能获取文本内容，不能获取标签内容
+            console.log(ele15.innerHTML) //innerHTML可以获取文本内容和标签内容
+            ele15.innerText = 'world'
+            ele15.innerHTML = '<h1>world</h1>'
+            console.log(ele15.innerText)
+            console.log(ele15.innerHTML)
+        }
+
+        function addCity() {
+            let ul = document.getElementById('cities')
+            let li = document.createElement('li')
+            li.id = "hz"
+            li.innerText = '杭州'
+            ul.appendChild(li)
+        }
+
+        function addCityBefore() {
+            let ul = document.getElementById('cities')
+            let li = document.createElement('li')
+            li.id = "nj"
+            li.innerText = '南京'
+            let bj = document.getElementById('bj')
+            ul.insertBefore(li, bj)
+        }
+
+        function replaceCity() {
+            let ul = document.getElementById('cities')
+            let li = document.createElement('li')
+            li.id = "cd"
+            li.innerText = '成都'
+            let sh = document.getElementById('sh')
+            ul.replaceChild(li, sh)
+        }
+
+        function removeCity() {
+            let sz = document.getElementById('sz')
+            sz.remove()
+        }
+
+        function clearCity() {
+            let ul = document.getElementById('cities')
+            ul.innerHTML = ''
+        }
+    </script>
+
+    <style>
+        #in01 {
+            color: #DD302D;
+        }
+    </style>
+</head>
+<body>
+<!--
+Document Object Model(DOM) 编程，即文档对象模型编程，是指通过JavaScript来操作HTML文档中的元素。
+1.获取document树
+2.获取元素
+    1.直接获取：getElementById() getElementsByTagName() getElementsByName() getElementsByClassName()
+    2.间接获取：children firstElementChild lastElementChild parentElement nextElementSibling previousElementSibling
+3.操作元素
+    1.操作元素的属性
+    2.操作元素的文本
+    3.操作元素的样式
+    4.增删元素
+-->
+
+<div class="outer_div">
+    <div class="inner_div">框1</div>
+    <div class="inner_div">框2</div>
+    <div class="inner_div">框3</div>
+</div>
+
+<div id="div01">
+    <input type="text" class="A" id="username" name="a">
+    <input type="text" class="B" id="password" name="a">
+    <input type="text" class="A" id="email">
+    <input type="text" class="B" id="address">
+</div>
+
+<label>
+    <input type="text">
+</label>
+<br>
+<input type="button" value="根据id获取指定元素" onclick="func1()" id="btn01">
+<input type="button" value="根据标签名获取多个元素" onclick="func2()" id="btn02">
+<input type="button" value="根据name属性获取多个元素" onclick="func3()" id="btn03">
+<input type="button" value="根据class属性值获取多个元素" onclick="func4()" id="btn04">
+<br>
+<input type="button" value="通过父元素获取子元素" onclick="func5()" id="btn05">
+<input type="button" value="通过子元素获取父元素" onclick="func6()" id="btn06">
+<input type="button" value="通过当前元素获取兄弟元素" onclick="func7()" id="btn07">
+
+<hr>
+<input id="in01" type="text" value="hello">
+<div id="div02">hello</div>
+
+<button onclick="changeAttribute()">操作属性</button>
+<button onclick="changeStyle()">操作样式</button>
+<button onclick="changeText()">操作文本</button>
+
+<hr>
+<ul id="cities">
+    <li id="bj">北京</li>
+    <li id="sh">上海</li>
+    <li id="sz">深圳</li>
+    <li id="gz">广州</li>
+</ul>
+
+<button onclick="addCity()">增加城市</button>
+<button onclick="addCityBefore()">在某城市前增加城市</button>
+<button onclick="replaceCity()">替换城市</button>
+<button onclick="removeCity()">删除城市</button>
+<button onclick="clearCity()">清空城市列表</button>
+
+</body>
+</html>

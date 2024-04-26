@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+    <script>
+        /*
+          JSON 是一种轻量级的数据交换格式。
+          JSON 语法规则：数据在名称/值对中；数据由逗号分隔；大括号保存对象；中括号保存数组。
+        */
+        var data = {
+            string: "Hello World",
+            number: 42,
+            boolean: true,
+            array: [1, 2, 3],
+            object: {name: "John", age: 30},
+            nullValue: null,
+        };
+
+        // JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+        var jsonString = JSON.stringify(data);
+        console.log(jsonString);
+
+        // JSON.parse() 方法用于将一个 JSON 字符串转换为对象。
+        var parsedData = JSON.parse(jsonString);
+        console.log(parsedData);
+
+        // JSON 对象
+        var obj = {
+            name: "John",
+            age: 30,
+            city: "New York",
+            say: function () {
+                console.log("我是" + this.name + "，今年" + this.age + "岁了");
+            },
+        };
+        console.log(obj); // {name: "John", age: 30, city: "New York", say: ƒ}
+
+        // JSON.stringify() 方法不能序列化函数
+        var myJSON = JSON.stringify(obj);
+        console.log(myJSON); // {"name":"John","age":30,"city":"New York"}
+
+        // JSON.parse() 方法不能解析函数
+        var myObj = JSON.parse(myJSON);
+        console.log(myObj); // {name: "John", age: 30, city: "New York"}
+    </script>
+</head>
+
+<body></body>
+</html>

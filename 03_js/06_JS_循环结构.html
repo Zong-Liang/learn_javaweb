@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        /*循环结构*/
+        // for循环打印99乘法表
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                document.write(j + "*" + i + "=" + i * j + "&nbsp;&nbsp;&nbsp;&nbsp");
+            }
+            document.write("<br>");
+        }
+
+        // while循环打印99乘法表
+        var i = 1;
+        while (i <= 9) {
+            var j = 1;
+            while (j <= i) {
+                document.write(j + "*" + i + "=" + i * j + "&nbsp;&nbsp;&nbsp;&nbsp");
+                j++;
+            }
+            document.write("<br>");
+            i++;
+        }
+
+        // do...while循环打印99乘法表
+        var i = 1;
+        do {
+            var j = 1;
+            do {
+                document.write(j + "*" + i + "=" + i * j + "&nbsp;&nbsp;&nbsp;&nbsp");
+                j++;
+            } while (j <= i);
+            document.write("<br>");
+            i++;
+        } while (i <= 9);
+
+        // for...in循环
+        var obj = {
+            name: "张三",
+            age: 18,
+        };
+        for (var key in obj) {
+            console.log(key + ":" + obj[key]);
+        }
+
+        // for...of循环
+        var arr = [1, 2, 3, 4, 5];
+        for (var value of arr) {
+            console.log(value);
+        }
+
+        // break语句
+        for (var i = 1; i <= 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            console.log(i);
+        }
+
+        // continue语句
+        for (var i = 1; i <= 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</head>
+<body></body>
+</html>

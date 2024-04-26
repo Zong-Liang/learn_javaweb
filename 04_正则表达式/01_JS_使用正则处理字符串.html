@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+
+        //验证
+        let reg1 = /o/ //定义正则表达式
+        let str1 = "hello world!" //定义字符串
+        console.log(reg1.test(str1))
+
+        //匹配
+        let reg2 = /l/g //g全局匹配
+        let str2 = "hello world!"
+        console.log(str2.match(reg2))
+
+        //替换
+        let reg3 = /l/gi //i忽略大小写
+        let str3 = "hello world!"
+        console.log(str3.replace(reg3, 'i'))
+
+        //匹配前后缀
+        let str4 = "java loves me"
+        let str5 = "I love java"
+        let str6 = "java"
+
+        let reg4 = /^java/i
+        let reg5 = /java$/i
+        let reg6 = /^java$/i
+        console.log(reg4.test(str4))
+        console.log(reg4.test(str5))
+        console.log(reg5.test(str5))
+        console.log(reg4.test(str5))
+        console.log(reg6.test(str6))
+
+        //校验用户名是否合法
+        //必须以字母开头、长度必须6-10位、后面其他字符可以是大小写字母，数字，下划线
+
+        let str7 = 'asdfgwer'
+        let reg7 = /^[a-zA-Z][a-zA-Z0-9_]{5,9}$/
+
+        console.log(reg7.test(str7))
+    </script>
+</head>
+<body>
+</body>
+</html>

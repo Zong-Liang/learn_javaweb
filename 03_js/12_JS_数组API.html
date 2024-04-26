@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+    <script>
+        /*
+          js               java
+          数据类型和变量     数据类型和变量
+          运算符            运算符
+          流程控制          流程控制
+          函数              方法
+          对象              面向对象
+          常见对象          Java常用类
+
+          js常见对象：
+            数组
+            Date对象
+            Math对象
+            String对象
+            Number对象
+            Boolean对象
+        */
+
+        // 数组
+        // 创建数组
+        var arr = new Array();
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 3;
+        console.log(arr);
+        console.log(arr.length);
+
+        // concat() 连接两个或多个数组，并返回结果
+        var arr1 = new Array(1, 2, 3);
+        var arr2 = new Array(4, 5, 6);
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        // join() 把数组的所有元素放入一个字符串
+        var arr4 = arr3.join();
+        console.log(arr4);
+
+        // pop() 删除并返回数组的最后一个元素
+        var arr5 = arr3.pop();
+        console.log(arr5);
+        console.log(arr3);
+
+        // push() 向数组的末尾添加一个或更多元素，并返回新的长度
+        var arr6 = arr3.push(7, 8, 9);
+        console.log(arr6);
+        console.log(arr3);
+
+        // reverse() 颠倒数组中元素的顺序
+        var arr7 = arr3.reverse();
+        console.log(arr7);
+
+        // shift() 删除并返回数组的第一个元素
+        var arr8 = arr3.shift();
+        console.log(arr8);
+        console.log(arr3);
+
+        // slice() 从某个已有的数组返回选定的元素
+        var arr9 = arr3.slice(1, 3);
+        console.log(arr9);
+
+        // sort() 对数组的元素进行排序
+        var arr10 = arr3.sort();
+        console.log(arr10);
+
+        // splice() 删除元素，并向数组添加新元素
+        var arr11 = arr3.splice(1, 2, 10, 11, 12);
+        console.log(arr11);
+        console.log(arr3);
+
+        // toLocaleString() 把数组转换为本地数组，并返回结果
+        var arr12 = arr3.toLocaleString();
+        console.log(arr12);
+
+        // toString() 把数组转换为字符串，并返回结果
+        var arr13 = arr3.toString();
+        console.log(arr13);
+
+        // unshift() 向数组的开头添加一个或更多元素，并返回新的长度
+        var arr14 = arr3.unshift(13, 14, 15);
+        console.log(arr14);
+        console.log(arr3);
+
+        // valueOf() 返回数组对象的原始值
+        var arr15 = arr3.valueOf();
+        console.log(arr15);
+
+        // 数组迭代方法
+        // forEach() 调用数组的每个元素，并将元素传递给回调函数
+        var arr16 = arr3.forEach(function (value, index, array) {
+            console.log(value, index, array);
+        });
+
+        // map() 通过指定函数处理数组的每个元素，并返回处理后的数组
+        var arr17 = arr3.map(function (value, index, array) {
+            return value * 2;
+        });
+        console.log(arr17);
+
+        // filter() 检测数组的每个元素，并返回符合条件的元素
+        var arr18 = arr3.filter(function (value, index, array) {
+            return value > 10;
+        });
+        console.log(arr18);
+
+        // some() 检测数组的元素是否有满足条件的
+        var arr19 = arr3.some(function (value, index, array) {
+            return value > 10;
+        });
+        console.log(arr19);
+
+        // every() 检测数组的元素是否都满足条件
+        var arr20 = arr3.every(function (value, index, array) {
+            return value > 10;
+        });
+        console.log(arr20);
+
+        // reduce() 将数组元素计算为一个值（从左到右）
+        var arr21 = arr3.reduce(function (prev, cur, index, array) {
+            return prev + cur;
+        });
+        console.log(arr21);
+
+        // reduceRight() 将数组元素计算为一个值（从右到左）
+        var arr22 = arr3.reduceRight(function (prev, cur, index, array) {
+            return prev + cur;
+        });
+        console.log(arr22);
+
+        // indexOf() 搜索数组中的元素，并返回它所在的位置
+        var arr23 = arr3.indexOf(10);
+        console.log(arr23);
+
+        // lastIndexOf() 返回一个指定的字符串值最后出现的位置，在一个字符串中的指定位置从后向前搜索
+        var arr24 = arr3.lastIndexOf(10);
+        console.log(arr24);
+
+        // isArray() 检测是否是数组
+        var arr25 = Array.isArray(arr3);
+        console.log(arr25);
+
+        // Array.from() 从一个类似数组或可迭代对象创建一个新的数组实例
+        var arr26 = Array.from(arr3);
+        console.log(arr26);
+
+        // Array.of() 创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型
+        var arr27 = Array.of(1, 2, 3, 4, 5);
+        console.log(arr27);
+
+        // copyWithin() 从数组的指定位置拷贝元素到数组的另一个指定位置中
+        var arr28 = arr3.copyWithin(1, 2, 4);
+        console.log(arr28);
+
+        // fill() 使用一个固定值填充数组
+        var arr29 = arr3.fill(0, 2, 4);
+        console.log(arr29);
+
+        // find() 返回数组中满足提供的测试函数的第一个元素的值，否则返回 undefined
+        var arr30 = arr3.find(function (value, index, array) {
+            return value > 10;
+        });
+        console.log(arr30);
+
+        // findIndex() 返回数组中满足提供的测试函数的第一个元素的索引，否则返回-1
+        var arr31 = arr3.findIndex(function (value, index, array) {
+            return value > 10;
+        });
+        console.log(arr31);
+
+        // keys() 返回数组的可迭代对象
+        var arr32 = arr3.keys();
+        for (var key of arr32) {
+            console.log(key);
+        }
+
+        // values() 返回数组的可迭代对象
+        var arr33 = arr3.values();
+        for (var value of arr33) {
+            console.log(value);
+        }
+
+        // entries() 返回数组的可迭代对象
+        var arr34 = arr3.entries();
+        for (var [key, value] of arr34) {
+            console.log(key, value);
+        }
+
+        // includes() 判断一个数组是否包含一个指定的值
+        var arr35 = arr3.includes(10);
+        console.log(arr35);
+
+        // flat() 创建一个新数组，其中有任何嵌套的数组元素被展平为新数组
+        var arr36 = arr3.flat();
+        console.log(arr36);
+
+        // flatMap() 首先使用映射函数映射每个元素，然后将结果压缩成一个新数组
+        var arr37 = arr3.flatMap(function (value, index, array) {
+            return value * 2;
+        });
+        console.log(arr37);
+    </script>
+</head>
+
+<body></body>
+</html>

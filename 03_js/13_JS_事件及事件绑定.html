@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        /*
+          事件可以是浏览器行为或用户行为，当这些行为发生时，可以触发对应的JS函数运行，我们称之为事件的发生。
+          JS的事件驱动指的就是行为触发代码运行的特点。
+        */
+        function func1() {
+            console.log("单击事件绑定1");
+        }
+
+        function func2() {
+            console.log("单击事件绑定2");
+        }
+
+        function func3() {
+            console.log("双击事件绑定");
+        }
+
+        function func4() {
+            console.log("鼠标移入事件绑定");
+        }
+
+        function func5() {
+            console.log("鼠标按下事件绑定");
+        }
+
+        function func6() {
+            console.log("鼠标进入事件绑定");
+        }
+
+        function func7() {
+            console.log("鼠标离开事件绑定");
+        }
+
+        function func8() {
+            console.log("鼠标移动事件绑定");
+        }
+
+        function func9() {
+            console.log("鼠标移出事件绑定");
+        }
+
+        function func10() {
+            console.log("鼠标抬起事件绑定");
+        }
+
+        function func11() {
+            console.log("键盘按下事件绑定");
+        }
+
+        function func12() {
+            console.log("键盘抬起事件绑定");
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" onclick="func1(), func2()" ondblclick="func2()">
+<br>
+<img src="../images/可乐.svg" onmouseover="func4()" onmousedown="func5()" onmouseenter="func6()" onmouseleave="func7()"
+     onmousemove="func8()" onmouseout="func9()" onmouseup="func10()" alt="cola">
+<br>
+<label>
+    <input type="text" onkeydown="func11()" onkeyup="func12()">
+</label>
+</body>
+</html>

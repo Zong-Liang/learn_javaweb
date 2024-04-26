@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        function focusEvent() {
+            console.log("获取焦点");
+        }
+
+        function blurEvent() {
+            console.log("失去焦点");
+        }
+
+        function changeEvent() {
+            console.log("选择改变");
+        }
+
+        function submitEvent() {
+            //弹窗三种方式
+            // alert("表单提交");
+            // confirm("表单提交");
+            // prompt("表单提交");
+            //阻止表单提交
+            return confirm("确定提交吗？");
+        }
+
+        function resetEvent() {
+            alert("重置");
+        }
+    </script>
+</head>
+<body>
+<!--
+表单事件：onfocus onblur onchange onsubmit onreset
+键盘事件：onkeydown onkeyup
+鼠标事件：onmouseover onmouseout onclick ondblclick onmousedown onmouseup onmousemove oncontextmenu
+页面加载事件：onload onunload
+其他事件：onresize onscroll
+
+事件触发的三种方式：
+1.内联事件：直接在标签中写入事件
+2.属性事件：在标签中写入事件
+3.事件监听：addEventListener() attachEvent() removeEventListener() detachEvent()
+-->
+
+<form action="01_JS_引入方式1.html" method="get" onsubmit="return submitEvent()" onreset="resetEvent()">
+    用户名：
+    <label for="username"></label>
+    <input type="text" name="username" id="username" onfocus="focusEvent()" onblur="blurEvent()"/>
+    <br>
+    昵称：
+    <label for="nickname"></label>
+    <input type="text" name="nickname" id="nickname" onfocus="focusEvent()"
+           onblur="blurEvent()"/>
+    <br>
+    登录账号：
+    <label for="login"></label>
+    <input type="text" name="login" id="login" onfocus="focusEvent()"
+           onblur="blurEvent()"/>
+    <br>
+    密码：
+    <label for="password"></label><input type="password" name="password" id="password" onfocus="focusEvent()"
+                                         onblur="blurEvent()"/>
+    <br>
+    选择籍贯：
+    <label>
+        <select onchange="changeEvent()">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">广州</option>
+            <option value="4">深圳</option>
+        </select>
+    </label>
+    <br>
+
+    <input type="submit" value="提交"/>
+    <input type="reset" value="重置"/>
+</form>
+</body>
+</html>

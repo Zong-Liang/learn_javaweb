@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <script>
+        /*JS 函数
+        函数是由事件驱动的或者当它被调用时执行的可重复使用的代码块，函数将代码的重复使用变得更加容易。
+        */
+
+        //函数定义：在 JavaScript 中，使用 function 关键词来定义函数。在函数名称后面的括号中可以添加参数，函数的实际代码在花括号中。
+        function myFunction() {
+            document.write("Hello World!");
+        }
+
+        //函数调用：定义的函数不会自动执行，函数只有在调用时才会执行。
+        myFunction();
+
+        //函数参数：函数可以通过参数接收输入。参数是在调用函数时传递给函数的值。
+        //在函数定义中指定参数：
+        function myFunction2(fname, lname) {
+            document.write(fname + " " + lname);
+        }
+
+        //在调用函数时指定参数：
+        myFunction2("Bill", "Gates");
+
+        //函数返回值：函数可以返回值。在 JavaScript 中，使用 return 关键词来返回值。
+        function myFunction3(a, b) {
+            return a * b;
+        }
+
+        //在调用函数时使用返回值：
+        document.write("<br>" + myFunction3(4, 3));
+        //函数 - 变量
+        //在 JavaScript 中，函数可以存储在变量中，函数是对象。
+        var x = myFunction4;
+
+        function myFunction4(a, b) {
+            return a * b;
+        }
+
+        document.write("<br>" + x(4, 3));
+        //函数 - 匿名函数
+        //在 JavaScript 中，匿名函数是一种没有函数名的函数，匿名函数存储在变量中，函数是对象。
+        var myFunction5 = function (a, b) {
+            return a * b;
+        };
+
+        document.write("<br>" + myFunction5(4, 3));
+        //函数 - 构造函数
+        //在 JavaScript 中，函数也可以作为对象构造函数使用，函数是对象，构造函数用于创建对象。
+        function myFunction6(arg1, arg2) {
+            this.firstName = arg1;
+            this.lastName = arg2;
+        }
+
+        var x = new myFunction6("John", "Doe");
+        document.write("<br>" + x.firstName + " " + x.lastName);
+
+        //函数 - 自调用
+        //在 JavaScript 中，有一种特殊的函数，它会在定义后立即执行。
+        //自调用函数在定义后立即执行。
+        //自调用函数有助于避免污染全局命名空间。
+        //自调用函数有助于保护变量。
+        (function () {
+            document.write("<br>Hello! I called myself");
+        })();
+
+        //函数 - 作为值返回
+        function myFunction7(a, b) {
+            return function (c) {
+                return a * b * c;
+            };
+        }
+
+        var x = myFunction7(4, 3);
+        document.write("<br>" + x(5));
+
+        //函数 - 作为参数传递
+        function myFunction8(a, b) {
+            return a * b;
+        }
+
+        function myFunction9(a, b, myFunction8) {
+            return myFunction8(a, b);
+        }
+
+        var x = myFunction9(4, 3, myFunction8);
+        document.write("<br>" + x);
+
+        //函数 - 闭包
+        //在 JavaScript 中，函数可以访问其创建时所在的上下文中的变量。
+        function add() {
+            var counter = 0;
+            return function () {
+                return counter++;
+            };
+        }
+
+        var myFunction10 = add();
+        document.write("<br>" + myFunction10());
+    </script>
+</head>
+
+<body></body>
+</html>

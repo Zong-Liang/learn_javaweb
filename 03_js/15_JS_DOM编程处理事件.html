@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<button id="btn">按钮</button>-->
+<!--<script>-->
+<!--    //获取元素-->
+<!--    const btn = document.getElementById("btn");-->
+<!--    //绑定事件-->
+<!--    btn.onclick = function () {-->
+<!--        console.log("点击事件");-->
+<!--    }-->
+<!--</script>-->
+<!--</body>-->
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--    <script>-->
+<!--        function func1() {-->
+<!--            //获取元素-->
+<!--            const btn = document.getElementById("btn");-->
+<!--            //绑定事件-->
+<!--            btn.onclick = function () {-->
+<!--                console.log("点击事件");-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body onload="func1()">-->
+<!--<button id="btn">按钮</button>-->
+<!--</body>-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            const div1 = document.getElementById("d1");
+            div1.onclick = function () {
+                div1.style.backgroundColor = "red";
+            }
+
+            //获取元素
+            const btn = document.getElementById("btn");
+            //绑定事件
+            btn.onclick = function () {
+                console.log("btn点击事件");
+                div1.onclick(undefined);
+            }
+
+        }
+    </script>
+    <style>
+        .div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+
+<div id="d1" class="div"></div>
+
+<a href="16_JS_BOM编程.html">跳转到16_JS_BOM编程.html</a>
+</body>
+</html>

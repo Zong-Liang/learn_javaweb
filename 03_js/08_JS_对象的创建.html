@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+    <script>
+        // 创建对象
+        var obj = new Object();
+        obj.name = "张三";
+        obj.age = 20;
+        obj.say = function () {
+            console.log("我是" + this.name + "，今年" + this.age + "岁了");
+        };
+        obj.say();
+    </script>
+</head>
+
+<body></body>
+</html>

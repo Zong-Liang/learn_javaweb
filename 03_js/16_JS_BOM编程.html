@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+            alert('Hello World!')
+        }
+
+        function func2() {
+            confirm('Are you sure?')
+        }
+
+        function func3() {
+            let str = prompt('Please input your name:', '')
+            console.log(str)
+        }
+
+        function func4() {
+            setTimeout(function () {
+                console.log('Hello World!')
+            }, 2000)
+        }
+
+        function func5() {
+            history.back()
+        }
+
+        function func6() {
+            history.forward()
+        }
+
+        function func7() {
+            location.href = 'https://www.baidu.com'
+        }
+
+        function func8() {
+            localStorage.setItem('name', 'Tom')
+            sessionStorage.setItem('age', 18)
+        }
+
+        function func9() {
+            let name = localStorage.getItem('name')
+            console.log(name)
+            let age = sessionStorage.getItem('age')
+            console.log(age)
+        }
+
+        function func10() {
+            localStorage.removeItem('name')
+            sessionStorage.removeItem('age')
+        }
+    </script>
+</head>
+<body>
+<!--
+Browser Object Model(BOM) 编程，即浏览器对象模型编程，是指通过JavaScript来操作浏览器的一些属性和方法。
+
+BOM主要包括以下几个对象：
+1. window对象：代表浏览器的一个窗口或一个框架，是BOM的顶层对象。
+2. location对象：代表浏览器的地址栏，可以用来获取或设置浏览器的地址。
+3. navigator对象：代表浏览器的信息，可以用来获取浏览器的信息。
+4. screen对象：代表用户的屏幕，可以用来获取用户的屏幕信息。
+5. history对象：代表浏览器的历史记录，可以用来操作浏览器的历史记录。
+6. document对象：代表当前页面的文档对象，可以用来操作页面的元素。
+7. console对象：代表浏览器的控制台，可以用来输出调试信息。
+8. localStorage对象：代表浏览器的本地存储，可以用来存储数据。
+9. sessionStorage对象：代表浏览器的会话存储，可以用来存储数据。
+
+window对象是BOM的顶层对象，它包含了其他所有的BOM对象，也是JavaScript中的全局对象，可以直接访问。
+
+window对象的常用属性：
+1. window.name：获取或设置窗口的名称。
+2. window.location：获取或设置窗口的URL地址。
+3. window.navigator：获取浏览器的信息。
+4. window.screen：获取用户的屏幕信息。
+5. window.history：操作浏览器的历史记录。
+6. window.document：获取当前页面的文档对象。
+7. window.console：获取浏览器的控制台对象。
+8. window.localStorage：获取浏览器的本地存储对象。
+9. window.sessionStorage：获取浏览器的会话存储对象。
+
+window对象的常用方法：
+1. window.alert()：弹出一个警告框。
+2. window.confirm()：弹出一个确认框。
+3. window.prompt()：弹出一个提示框。
+4. window.open()：打开一个新的窗口。
+5. window.close()：关闭当前窗口。
+6. window.setTimeout()：延迟执行一个函数。
+7. window.setInterval()：定时执行一个函数。
+8. window.clearTimeout()：清除延迟执行的函数。
+9. window.clearInterval()：清除定时执行的函数。
+
+window对象的常用事件：
+1. window.onload：页面加载完成时触发。
+2. window.onunload：页面卸载时触发。
+3. window.onresize：窗口大小改变时触发。
+4. window.onscroll：窗口滚动时触发。
+5. window.onfocus：窗口获得焦点时触发。
+6. window.onblur：窗口失去焦点时触发。
+7. window.onbeforeunload：页面即将卸载时触发。
+8. window.onerror：页面发生错误时触发。
+9. window.onstorage：本地存储发生变化时触发。
+
+window对象的常用属性和方法：
+1. window.innerWidth：获取窗口的内部宽度。
+2. window.innerHeight：获取窗口的内部高度。
+-->
+<button onclick="func1()">信息提示框</button>
+<br>
+
+<button onclick="func2()">确认提示框</button>
+<br>
+
+<button onclick="func3()">输入提示框</button>
+<br>
+
+<button onclick="func4()">两秒中后向控制台打印</button>
+<br>
+
+<a href="https://www.baidu.com">百度</a>
+<br>
+
+<button onclick="func5()">上一页</button>
+<button onclick="func6()">下一页</button>
+<br>
+
+<button onclick="func7()">新跳转方法</button>
+<br>
+
+<button onclick="func8()">存储数据</button>
+<br>
+
+<button onclick="func9()">读取数据</button>
+<br>
+
+<button onclick="func10()">清除数据</button>
+<br>
+</body>
+</html>

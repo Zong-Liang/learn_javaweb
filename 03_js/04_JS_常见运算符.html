@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+
+    <script>
+        /*
+        1. 算术运算符
+        2. 赋值运算符
+        3. 比较运算符
+        4. 逻辑运算符
+        5. 三元运算符
+        6. 字符串拼接
+        7. 自增自减
+        8. 位运算符
+        9. 其他运算符
+        10. 运算符优先级
+        11. 运算符的结合性
+        12. 运算符的特殊情况
+        */
+
+        // 1. 算术运算符
+        var a = 10;
+        var b = 3;
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a % b);
+
+        // 2. 赋值运算符
+        var c = 10;
+        c += 5;
+        console.log(c);
+
+        // 3. 比较运算符
+        var d = 10;
+        var e = 20;
+        console.log(d > e);
+        console.log(d < e);
+        console.log(d >= e);
+        console.log(d <= e);
+        console.log(d == e);
+        console.log(d != e);
+
+        // 4. 逻辑运算符
+        var f = true;
+        var g = false;
+        console.log(f && g);
+        console.log(f || g);
+        console.log(!f);
+
+        // 5. 三元运算符
+        var h = 10;
+        var i = 20;
+        var j = h > i ? h : i;
+        console.log(j);
+
+        // 6. 字符串拼接
+        var k = "hello";
+        var l = "world";
+        console.log(k + l);
+
+        // 7. 自增自减
+        var m = 10;
+        m++;
+        console.log(m);
+        m--;
+        console.log(m);
+
+        // 8. 位运算符
+        var n = 2;
+        var o = 3;
+        console.log(n & o);
+        console.log(n | o);
+        console.log(n ^ o);
+        console.log(~n);
+        console.log(n << 1);
+        console.log(n >> 1);
+        console.log(n >>> 1);
+
+        // 9. 其他运算符
+        var p = 10;
+        var q = 3;
+        console.log(p ** q);
+        console.log(typeof p);
+        console.log(typeof q);
+
+        // 10. 运算符优先级
+        var r = 10;
+        var s = 3;
+        var t = 5;
+        console.log(r + s * t);
+        console.log((r + s) * t);
+
+        // 11. 运算符的结合性
+        var u = 10;
+        var v = 3;
+        var w = 5;
+        console.log(u + v + w);
+        console.log(u + (v + w));
+
+        // 12. 运算符的特殊情况
+        var x = 10;
+        var y = "10";
+        console.log(x == y); // 隐式转换为数字
+        console.log(x === y); // 严格相等
+    </script>
+</head>
+<body></body>
+</html>
