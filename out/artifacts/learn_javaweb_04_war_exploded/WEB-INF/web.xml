@@ -4,16 +4,16 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
-    <!--
-    配置servlet类并起一个别名
-    -->
-    <servlet>
-        <servlet-name>userServlet</servlet-name>
-        <servlet-class>com.learn_javaweb.Main</servlet-class>
-    </servlet>
+    <!--    &lt;!&ndash;-->
+    <!--    配置servlet类并起一个别名-->
+    <!--    &ndash;&gt;-->
+    <!--    <servlet>-->
+    <!--        <servlet-name>userServlet</servlet-name>-->
+    <!--        <servlet-class>com.learn_javaweb.Main</servlet-class>-->
+    <!--    </servlet>-->
 
-    <servlet-mapping>
-        <servlet-name>userServlet</servlet-name>
-        <url-pattern>/userServlet</url-pattern>
-    </servlet-mapping>
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>userServlet</servlet-name>-->
+    <!--        <url-pattern>/userServlet</url-pattern>-->
+    <!--    </servlet-mapping>-->
 </web-app>

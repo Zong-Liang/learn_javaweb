@@ -17,3 +17,11 @@
 servlet-api.jar 导入问题：servlet-api 编码的时候需要，运行的时候在服务器环境中由服务软件 tomcat 提供，所以在 javaweb 项目中在打包/构建的过程中是无需携带 servlet-api.jar的。
 
 Content-Type 响应头问题：MIME 类型响应头 媒体类型、文件类型、响应的数据类型，MIME 类型用于告诉客户端响应的数据是什么类型的数据，客户端以此决定用什么方式解析响应体。(conf/web.xml 里记录了所有MIME 类型)
+
+一个 servlet-name 可以同时对应多个 url-pattern。
+
+一个 servlet 标签可以同时对应多个 servlet-mapping 标签。
+
+url-pattern 精确匹配：
+
+url-pattern 模糊匹配：*作为通配符，在哪哪就是模糊。/ 匹配全部不包含 jsp 文件，/ * 匹配全部包含 jsp 文件。
