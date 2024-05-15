@@ -9,11 +9,55 @@
     <!--    &ndash;&gt;-->
     <!--    <servlet>-->
     <!--        <servlet-name>userServlet</servlet-name>-->
-    <!--        <servlet-class>com.learn_javaweb.Main</servlet-class>-->
+    <!--        <servlet-class>com.learn_javaweb.UserServletServlet</servlet-class>-->
     <!--    </servlet>-->
 
     <!--    <servlet-mapping>-->
     <!--        <servlet-name>userServlet</servlet-name>-->
     <!--        <url-pattern>/userServlet</url-pattern>-->
     <!--    </servlet-mapping>-->
+
+    <!--    <servlet>-->
+    <!--        <servlet-name>servletLifeCycle</servlet-name>-->
+    <!--        <servlet-class>com.learn_javaweb.ServletLifeCycle</servlet-class>-->
+    <!--        &lt;!&ndash;-->
+    <!--            默认-1 tomcat启动时不会实例化该servlet-->
+    <!--            其他整数 表示tomcat启动时实例化该servlet的顺序，如果序号冲突，tomcat会自动协调顺序-->
+    <!--         &ndash;&gt;-->
+    <!--        <load-on-startup>6</load-on-startup>-->
+    <!--    </servlet>-->
+
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>servletLifeCycle</servlet-name>-->
+    <!--        <url-pattern>/servletLifeCycle</url-pattern>-->
+    <!--    </servlet-mapping>-->
+
+    <!--    <servlet>-->
+    <!--        <servlet-name>servletConfigTest</servlet-name>-->
+    <!--        <servlet-class>com.learn_javaweb.ServletConfigTest</servlet-class>-->
+
+    <!--        <init-param>-->
+    <!--            <param-name>key_a</param-name>-->
+    <!--            <param-value>value_a</param-value>-->
+    <!--        </init-param>-->
+    <!--        <init-param>-->
+    <!--            <param-name>key_b</param-name>-->
+    <!--            <param-value>value_b</param-value>-->
+    <!--        </init-param>-->
+    <!--    </servlet>-->
+
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>servletConfigTest</servlet-name>-->
+    <!--        <url-pattern>/servletConfigTest</url-pattern>-->
+    <!--    </servlet-mapping>-->
+
+    <context-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>zhangsan</param-value>
+    </context-param>
 </web-app>

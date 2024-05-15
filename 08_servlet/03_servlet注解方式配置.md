@@ -10,7 +10,7 @@
 -->
 <servlet>
     <servlet-name>userServlet</servlet-name>
-    <servlet-class>com.learn_javaweb.Main</servlet-class>
+    <servlet-class>com.learn_javaweb.UserServlet</servlet-class>
 </servlet>
 
 <servlet-mapping>
@@ -45,4 +45,3 @@ public @interface WebServlet {
     String displayName() default "";
 }
 ```
-
