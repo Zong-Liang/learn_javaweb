@@ -5,9 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-<form method="get" action="userServlet">
-    用户名：<input type="text" name="username"> <br/>
-    <input type="submit" value="校验">
+<form method="post" action="httpServletRequestAPITest">
+    用户名：<input type="text" name="username"> <br>
+    密码：<input type="password" name="uesrpwd"> <br>
+    爱好：
+    <input type="checkbox" name="hobby" value="1"> 唱
+    <input type="checkbox" name="hobby" value="2"> 跳
+    <input type="checkbox" name="hobby" value="3"> rap
+    <input type="checkbox" name="hobby" value="4"> 篮球
+    <input type="submit">
 </form>
 </body>
 </html>
