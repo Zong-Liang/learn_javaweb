@@ -14,14 +14,14 @@ public class DomainTest2 extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取请求域数据
         Object reqValue = req.getAttribute("req");
-        System.out.println("请求域：" + reqValue);
+        System.out.println("req: " + reqValue);
 
         //获取会话域数据
         Object sessionValue = req.getSession().getAttribute("session");
-        System.out.println("会话域" + sessionValue);
+        System.out.println("session: " + sessionValue);
 
         //获取应用域数据
         Object appValue = req.getServletContext().getAttribute("app");
-        System.out.println("应用域" + appValue);
+        System.out.println("app: " + appValue);
     }
 }

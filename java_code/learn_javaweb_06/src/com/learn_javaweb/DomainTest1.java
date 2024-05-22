@@ -24,5 +24,12 @@ public class DomainTest1 extends HttpServlet {
         //向应用域请求数据
         ServletContext app = req.getServletContext();
         app.setAttribute("app", "appValue");
+
+        //获取请求域数据
+        Object reqValue = req.getAttribute("req");
+        System.out.println("req: " + reqValue);
+
+        //请求转发
+        req.getRequestDispatcher("/domainTest2").forward(req, resp);
     }
 }
