@@ -8,12 +8,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(value = "/servletTest1")
-//@WebServlet(value = "/servletTest1", name = "servletTest1")
-public class ServletTest1 extends HttpServlet {
+@WebServlet("/servletTest2")
+public class ServletTest2 extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("ServletTest1 service invoked!");
-        resp.getWriter().write("ServletTest1 message!");
+        //修改应用域中放入的数据
+        req.getServletContext().setAttribute("data", "hello, servlet2");
     }
 }
